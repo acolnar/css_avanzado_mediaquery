@@ -1,0 +1,192 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Quicksand", sans-serif;
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-areas:
+    "navbar"
+    "menu"
+    "main"
+    "footer"
+    ;
+}
+
+/* --------------------NAVBAR-------------------- */
+
+.navbar{
+    grid-area: navbar;
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px 10px 20px;
+}
+
+.fa-solid{
+    color: white;
+
+}
+
+.navbar img{
+    width: 150px;
+}
+
+.navbar-list{
+    display: none;
+}
+
+/* --------------------MENU LATERAL-------------------- */
+
+.menu-lateral{
+    display: flex;
+    flex-direction: column;
+    grid-area: menu;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* --------------------SECCION PRINCIPAL-------------------- */
+
+.grilla-productos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-container{
+    display: flex;
+    grid-area: main;
+    padding: 10px;
+}
+
+.carta-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.carta-producto img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.carta-producto a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 40px;
+    background-color: brown;
+    color: white;
+}
+
+/* --------------------PIE DE PAGINA-------------------- */
+
+.footer{
+    grid-area: footer;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    padding: 30px 0 20px 0;
+}
+
+.logo-social{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+@media (min-width: 576px){
+
+    .grid-layout{
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas:
+        "navbar navbar"
+        "menu main"
+        "footer footer"
+        ;
+    }
+
+    .menu-lateral{
+        justify-content: start;
+    }
+
+    .grilla-productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar-list{
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar-list a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .fa-solid{
+        display: none;
+    }
+}
+
+@media (min-width: 992px){
+
+    .grid-layout{
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas:
+        "navbar navbar"
+        "menu main"
+        "footer footer"
+        ;
+    }
+
+    .menu-lateral{
+        justify-content: start;
+    }
+
+    .grilla-productos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar-list{
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar-list a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .fa-solid{
+        display: none;
+    }
+}
